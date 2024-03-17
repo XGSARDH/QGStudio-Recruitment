@@ -135,7 +135,7 @@ LNode* ReverseEvenList(LinkedList *L);
  *	@return		 : LNode
  *  @notice      : choose to finish
  */
-LNode* FindMidNode(LinkedList L);
+LNode* FindMidNode(LinkedList *L);
 
 /**
  *  @name        : LinkedList* CreateLNode()

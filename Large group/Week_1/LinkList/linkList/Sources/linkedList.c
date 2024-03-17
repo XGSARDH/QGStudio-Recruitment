@@ -170,13 +170,13 @@ LNode* ReverseEvenList(LinkedList* L)
 	return *L;
 }
 
-LNode* FindMidNode(LinkedList L)
+LNode* FindMidNode(LinkedList *L)
 {
-	if (L == NULL)return NULL;
-	if (L->next == NULL)return NULL;
-	if (IsLoopList(L) == SUCCESS)return NULL;//Excluding the possibility of forming a linked list.
-	LNode* quickLNode = (L)->next;
-	LNode* slowLNode = (L)->next;
+	if ((*L) == NULL)return NULL;
+	if ((*L)->next == NULL)return NULL;
+	if (IsLoopList(*L) == SUCCESS)return NULL;//Excluding the possibility of forming a linked list.
+	LNode* quickLNode = (*L)->next;
+	LNode* slowLNode = (*L)->next;
 
 	while (quickLNode->next != NULL) {
 		quickLNode = quickLNode->next;

@@ -5,9 +5,13 @@
 
 #include"..\Headers\linkedList.h"
 
-
+//Display menu
 void displayMenu();
+
+//Display input rules
 void displayRule();
+
+//Processing input options for menus
 void dealMenu(int choose, LinkedList* L);
 
 int main() {
@@ -154,7 +158,7 @@ void dealMenu(int choose, LinkedList* L)
 		break;
 
 	case 10:
-		mid = FindMidNode(*L);
+		mid = FindMidNode(L);
 		if (mid == NULL) {
 			if (IsLoopList(*L) == SUCCESS)printf("This is a cyclic linked list\n");
 			else printf("This is an empty linked list.\n");
