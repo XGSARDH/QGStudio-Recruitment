@@ -1,9 +1,20 @@
-﻿#define _CRT_SECURE_NO_WARNINGS 1
+﻿/**************************************************************
+*	Macro Define Section
+**************************************************************/
+
+#define _CRT_SECURE_NO_WARNINGS 1
+
+/**************************************************************
+*	Macro Include Section
+**************************************************************/
 
 #include<stdio.h> 
 #include<stdlib.h>
-
 #include"..\Headers\linkedList.h"
+
+/**************************************************************
+*	Multi-Include-Prevent Section
+**************************************************************/
 
 #ifndef LINKEDLIST_C_INCLUDED
 #define LINKEDLIST_C_INCLUDED
@@ -243,5 +254,9 @@ Status IsMakeEqualData(ElemType* origin, ElemType* result)
 	if (*origin == *result)return SUCCESS;
 	else return ERROR;
 }
+
+/**************************************************************
+*	End-Multi-Include-Prevent Section
+**************************************************************/
 
 #endif

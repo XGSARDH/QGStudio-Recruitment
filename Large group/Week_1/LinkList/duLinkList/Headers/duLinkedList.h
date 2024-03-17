@@ -8,7 +8,7 @@
  *--------------------------------Revision History--------------------------------------
  *	No	version		Data			Revised By			Item			Description
  *	1	1.1			normal			XSARDH				4 functions		Add four functions related to ElemType operations			
- *
+ *	2	1.2			normal			XGSARDH				2 functions		Added relevant bidirectional linked lists to assist sweet potatoes
  ***************************************************************************************/
 
  /**************************************************************

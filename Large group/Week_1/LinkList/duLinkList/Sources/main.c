@@ -1,9 +1,20 @@
+/**************************************************************
+*	Macro Define Section
+**************************************************************/
+
 #define _CRT_SECURE_NO_WARNINGS 1
+
+/**************************************************************
+*	Macro Include Section
+**************************************************************/
 
 #include<stdio.h>
 #include<stdlib.h>
-
 #include"..\Headers\DuLinkedList.h"
+
+/**************************************************************
+*	Prototype Declare Section
+**************************************************************/
 
 //Display menu
 void displayMenu();
@@ -13,6 +24,10 @@ void displayRule();
 
 //Processing input options for menus
 void dealMenu(int choose, DuLinkedList* L);
+
+/**************************************************************
+*	Main function implementation Section
+**************************************************************/
 
 int main()
 {
@@ -33,6 +48,10 @@ int main()
 	return 0;
 	return 0;
 }
+
+/**************************************************************
+*	Prototype implementation Section
+**************************************************************/
 
 void displayMenu()
 {

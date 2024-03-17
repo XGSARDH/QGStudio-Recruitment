@@ -1,8 +1,15 @@
+/**************************************************************
+*	Macro Define Section
+**************************************************************/
+
 #define _CRT_SECURE_NO_WARNINGS 1
+
+/**************************************************************
+*	Macro Include Section
+**************************************************************/
 
 #include<stdio.h>
 #include<stdlib.h>
-
 #include"..\Headers\duLinkedList.h"
 
 /**************************************************************
@@ -11,6 +18,10 @@
 
 #ifndef DULINKEDLIST_C_INCLUDED
 #define DULINKEDLIST_C_INCLUDED
+
+/**************************************************************
+*	Prototype implementation Section
+**************************************************************/
 
 Status InitList_DuL(DuLinkedList* L)
 {
