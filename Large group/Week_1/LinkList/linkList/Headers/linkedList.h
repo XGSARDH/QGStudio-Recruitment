@@ -7,7 +7,7 @@
  *
  *--------------------------------Revision History--------------------------------------
  *	No	version		Data			Revised By			Item			Description
- *
+ *	1	1.1			normal			XGSARDH				6 functions		Implement all functions while adding tail interpolation method for unified operation of ElemType types
  *
  ***************************************************************************************/
 
@@ -115,7 +115,7 @@ Status ReverseList(LinkedList *L);
  *	@description : judge whether the linked list is looped
  *	@param		 : L(the head node)
  *	@return		 : Status
- *  @notice      : None
+ *  @notice      : ERROR is not looplist, SUCCESS is looplist.
  */
 Status IsLoopList(LinkedList L);
 
@@ -135,7 +135,61 @@ LNode* ReverseEvenList(LinkedList *L);
  *	@return		 : LNode
  *  @notice      : choose to finish
  */
-LNode* FindMidNode(LinkedList *L);
+LNode* FindMidNode(LinkedList L);
+
+/**
+ *  @name        : LinkedList* CreateLNode()
+ *	@description : create a list with input and print the result
+ *	@param		 : None
+ *	@return		 : LinkedList*
+ *  @notice      : Self written
+ */
+LinkedList CreateLNode();
+
+/**
+ *  @name        : void PrintElemType(ElemType e)
+ *	@description : print the ElemType
+ *	@param		 : ElemType e
+ *	@return		 : None
+ *  @notice      : Self written
+ */
+void PrintElemType(ElemType e);
+
+/**
+ *  @name        : void ScanfElemType(ElemType *e)
+ *	@description : scanf the ElemType
+ *	@param		 : ElemType *e
+ *	@return		 : Status
+ *  @notice      : Self written
+ */
+Status ScanfElemType(ElemType* e);
+
+/**
+ *  @name        : Status AddEndList(LinkedList* L)
+ *	@description : Tail insertion method for inserting pointers
+ *	@param		 : LinkedList L, ElemType input
+ *	@return		 : LinkedList
+ *  @notice      : Self written
+ */
+Status AddEndList(LinkedList L, ElemType* input);
+
+/**
+ *  @name        : Status MakeEqualData(ElemType* origin, ElemType* Result);
+ *	@description : Make the value of ElemData equal to the value of another ElemDatas
+ *	@param		 : ElemType* origin, ElemType* result
+ *	@return		 : Status
+ *  @notice      : Self written
+ */
+Status MakeEqualData(ElemType* origin, ElemType* result);
+
+/**
+ *  @name        : Status MakeEqualData(ElemType* origin, ElemType* Result);
+ *	@description : Check if two ElemTypes are equal
+ *	@param		 : ElemType* origin, ElemType* result
+ *	@return		 : Status
+ *  @notice      : Self written, SUCCESS is equal.ERROR is not equal.
+ */
+Status IsMakeEqualData(ElemType* origin, ElemType* result);
 
  /**************************************************************
 *	End-Multi-Include-Prevent Section
