@@ -139,12 +139,21 @@ LNode* FindMidNode(LinkedList *L);
 
 /**
  *  @name        : LinkedList* CreateLNode()
- *	@description : create a list with input and print the result
+ *	@description : create a list with input
  *	@param		 : None
  *	@return		 : LinkedList*
  *  @notice      : Self written
  */
 LinkedList CreateLNode();
+
+/**
+ *  @name        : Status AddEndList(LinkedList* L)
+ *	@description : Tail insertion method for inserting pointers
+ *	@param		 : LinkedList L, ElemType input
+ *	@return		 : LinkedList
+ *  @notice      : Self written
+ */
+Status AddEndList(LinkedList L, ElemType* input);
 
 /**
  *  @name        : void PrintElemType(ElemType e)
@@ -163,15 +172,6 @@ void PrintElemType(ElemType e);
  *  @notice      : Self written
  */
 Status ScanfElemType(ElemType* e);
-
-/**
- *  @name        : Status AddEndList(LinkedList* L)
- *	@description : Tail insertion method for inserting pointers
- *	@param		 : LinkedList L, ElemType input
- *	@return		 : LinkedList
- *  @notice      : Self written
- */
-Status AddEndList(LinkedList L, ElemType* input);
 
 /**
  *  @name        : Status MakeEqualData(ElemType* origin, ElemType* Result);

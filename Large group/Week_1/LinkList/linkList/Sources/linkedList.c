@@ -51,21 +51,12 @@ Status DeleteList(LNode* p, ElemType* e)
 {
 	if (p == NULL)return ERROR;
 	if (p->next == NULL)return ERROR;
-
-	LNode* move = p;
-
-	while (move->next != NULL) {
-		if (IsMakeEqualData(&(move->next->data), e) == SUCCESS) {
-			LNode* curr = move->next;
-			MakeEqualData(&(move->next->data), e);
-			move->next = curr->next;
-			free(curr);
-			return SUCCESS;
-		}
-		else move = move->next;
-
-	}
-	return ERROR;
+	
+	LNode* curr = p->next;
+	MakeEqualData(e,&(curr->data));
+	p->next = curr->next;
+	free(curr);
+	return SUCCESS;
 }
 
 void TraverseList(LinkedList L, void (*visit)(ElemType e))
@@ -211,6 +202,20 @@ LinkedList CreateLNode()
 	return L;
 }
 
+Status AddEndList(LinkedList L, ElemType* input)
+{
+	LinkedList newLode = NULL;
+	if (InitList(&newLode) == ERROR)return ERROR;
+	MakeEqualData(&(newLode->data), input);
+
+	LNode* move = L;
+	while (move->next != NULL) {
+		move = move->next;
+	}
+	move->next = newLode;
+	return SUCCESS;
+}
+
 void PrintElemType(ElemType e)
 {
 	printf("%d", e);
@@ -222,20 +227,6 @@ Status ScanfElemType(ElemType* e)
 	if (e == NULL)return ERROR;
 	if(scanf("%d", e) != 1)return ERROR;
 	getchar();
-	return SUCCESS;
-}
-
-Status AddEndList(LinkedList L, ElemType* input) 
-{
-	LinkedList newLode = NULL;
-	if (InitList(&newLode) == ERROR)return ERROR;
-	MakeEqualData(&(newLode->data), input);
-
-	LNode* move = L;
-	while (move->next != NULL) {
-		move = move->next;
-	}
-	move->next = newLode;
 	return SUCCESS;
 }
 

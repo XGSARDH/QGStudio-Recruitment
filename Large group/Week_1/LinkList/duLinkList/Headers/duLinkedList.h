@@ -7,7 +7,7 @@
  *
  *--------------------------------Revision History--------------------------------------
  *	No	version		Data			Revised By			Item			Description
- *
+ *	1	1.1			normal			XSARDH				4 functions		Add four functions related to ElemType operations			
  *
  ***************************************************************************************/
 
@@ -102,6 +102,59 @@ Status DeleteList_DuL(DuLNode *p, ElemType *e);
  */
 void TraverseList_DuL(DuLinkedList L, void (*visit)(ElemType e));
 
+/**
+ *  @name        : DuLinkedList CreateLNode()
+ *	@description : create a list with input
+ *	@param		 : None
+ *	@return		 : None
+ *  @notice      : Self written
+ */
+DuLinkedList CreateLNode();
+
+/**
+ *  @name        : Status AddEndList(DuLinkedList* L)
+ *	@description : Tail insertion method for inserting pointers
+ *	@param		 : DuLinkedList L, ElemType input
+ *	@return		 : DuLinkedList
+ *  @notice      : Self written
+ */
+Status AddEndList(DuLinkedList L, ElemType* input);
+
+/**
+ *  @name        : void PrintElemType(ElemType e)
+ *	@description : print the ElemType
+ *	@param		 : ElemType e
+ *	@return		 : None
+ *  @notice      : Self written
+ */
+void PrintElemType(ElemType e);
+
+/**
+ *  @name        : void ScanfElemType(ElemType *e)
+ *	@description : scanf the ElemType
+ *	@param		 : ElemType *e
+ *	@return		 : Status
+ *  @notice      : Self written
+ */
+Status ScanfElemType(ElemType* e);
+
+/**
+ *  @name        : Status MakeEqualData(ElemType* origin, ElemType* Result);
+ *	@description : Make the value of ElemData equal to the value of another ElemDatas
+ *	@param		 : ElemType* origin, ElemType* result
+ *	@return		 : Status
+ *  @notice      : Self written
+ */
+Status MakeEqualData(ElemType* origin, ElemType* result);
+
+/**
+ *  @name        : Status MakeEqualData(ElemType* origin, ElemType* Result);
+ *	@description : Check if two ElemTypes are equal
+ *	@param		 : ElemType* origin, ElemType* result
+ *	@return		 : Status
+ *  @notice      : Self written, SUCCESS is equal.ERROR is not equal.
+ */
+Status IsMakeEqualData(ElemType* origin, ElemType* result);
 
  /**************************************************************
 *	End-Multi-Include-Prevent Section

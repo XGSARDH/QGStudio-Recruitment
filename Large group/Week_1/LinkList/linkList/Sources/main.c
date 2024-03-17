@@ -37,7 +37,7 @@ void displayMenu()
 	printf("1. "); printf("AddEndList"); printf("\n");
 	printf("2. "); printf("DestroyList"); printf("\n");
 	printf("3. "); printf("InsertList(PS:This demonstrates the effect of inserting a header node)"); printf("\n");
-	printf("4. "); printf("DeleteList"); printf("\n");
+	printf("4. "); printf("DeleteList(PS:Default to the first node)"); printf("\n");
 	printf("5. "); printf("TraverseList"); printf("\n");
 	printf("6. "); printf("SearchList"); printf("\n");
 	printf("7. "); printf("ReverseList"); printf("\n");
@@ -98,9 +98,11 @@ void dealMenu(int choose, LinkedList* L)
 
 	case 4:
 		printf("Results before deletion:"); TraverseList(*L, PrintElemType);
-		ScanfElemType(&input);
 
-		if (DeleteList(*L, &input) == SUCCESS)printf("Delete successful\n");
+		if (DeleteList(*L, &input) == SUCCESS) {
+			printf("Delete successful\n");
+			printf("Deleted value: %d \n", input);
+		}
 		else printf("Delete failed\n");
 
 		printf("Result after deletion :"); TraverseList(*L, PrintElemType);
