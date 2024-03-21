@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e15d2599-06fe-456f-8697-2804fcb5fdf1" name="变更" comment="" />
+    <list default="true" id="e15d2599-06fe-456f-8697-2804fcb5fdf1" name="变更" comment="Complete JdbcUtils">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jdbc-demo/com/xgsardh/util/JdbcUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jdbc-demo/com/xgsardh/util/JdbcUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jdbc-demo/com/xgsardh/util/JdbcUtilsDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jdbc-demo/com/xgsardh/util/JdbcUtilsDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtilsDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtilsDemo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +25,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,14 +44,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/SARDH/Desktop/QGStudio-Recruitment/Small group/Week_1/jdbc-demo/lib",
+    "last_opened_file_path": "C:/Users/SARDH/IdeaProjects/JdbcTest/JdbcTest.iml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "SDK",
+    "project.structure.last.edited": "项目",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -89,6 +98,9 @@
       <option name="presentableId" value="Default" />
       <updated>1710984371802</updated>
       <workItem from="1710984373316" duration="7128000" />
+      <workItem from="1711016891578" duration="681000" />
+      <workItem from="1711018109733" duration="2522000" />
+      <workItem from="1711020780908" duration="3406000" />
     </task>
     <task id="LOCAL-00001" summary="Complete JdbcUtils">
       <created>1711013606561</created>
@@ -122,6 +134,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="Complete JdbcUtils" />
     <option name="LAST_COMMIT_MESSAGE" value="Complete JdbcUtils" />
   </component>

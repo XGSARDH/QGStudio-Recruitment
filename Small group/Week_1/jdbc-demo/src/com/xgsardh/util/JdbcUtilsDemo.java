@@ -8,7 +8,7 @@ public class JdbcUtilsDemo {
         Connection conn = JdbcUtils.getconntion();
 
         //3. 定义sql语句
-        String sql = "update account set money = 4000 where id = 2";
+        String sql = "update account set money = 1000 where id = 2";
 
         //4. 获取执行sql的对象 Statement
         Statement stmt = conn.createStatement();
@@ -22,7 +22,7 @@ public class JdbcUtilsDemo {
 
         //7. 释放资源
         //先释放后面打开的,后释放先打开的+
-        JdbcUtils.close(null,stmt,conn);
+        JdbcUtils.close(null,stmt,null,conn);
 
     }
 
