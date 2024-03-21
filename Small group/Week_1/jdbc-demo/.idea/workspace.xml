@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e15d2599-06fe-456f-8697-2804fcb5fdf1" name="变更" comment="Complete JdbcUtils.update">
+      <change afterPath="$PROJECT_DIR$/src/com/xgsardh/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xgsardh/util/MyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdbc-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jdbc-demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jdbc-demo/com/xgsardh/util/JdbcUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jdbc-demo/com/xgsardh/util/JdbcUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jdbc-demo/com/xgsardh/util/JdbcUtilsDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jdbc-demo/com/xgsardh/util/JdbcUtilsDemo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtils.java" afterDir="false" />
@@ -20,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -73,7 +75,7 @@
       <recent name="com.xgsardh.util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JdbcUtilsDemo.testcreate">
+  <component name="RunManager" selected="JUnit.JdbcUtilsDemo.testquery">
     <configuration name="JdbcUtilsDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xgsardh.util.JdbcUtilsDemo" />
       <module name="jdbc-demo" />
@@ -103,8 +105,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JdbcUtilsDemo.testquery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xgsardh.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xgsardh.util" />
+      <option name="MAIN_CLASS_NAME" value="com.xgsardh.util.JdbcUtilsDemo" />
+      <option name="METHOD_NAME" value="testquery" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcUtilsDemo.testupdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xgsardh.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xgsardh.util" />
+      <option name="MAIN_CLASS_NAME" value="com.xgsardh.util.JdbcUtilsDemo" />
+      <option name="METHOD_NAME" value="testupdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JdbcUtilsDemo.testquery" />
+        <item itemvalue="JUnit.JdbcUtilsDemo.testupdate" />
         <item itemvalue="JUnit.JdbcUtilsDemo.testcreate" />
         <item itemvalue="应用程序.JdbcUtilsDemo" />
       </list>
@@ -121,7 +157,7 @@
       <workItem from="1710984373316" duration="7128000" />
       <workItem from="1711016891578" duration="681000" />
       <workItem from="1711018109733" duration="2522000" />
-      <workItem from="1711020780908" duration="5084000" />
+      <workItem from="1711020780908" duration="7085000" />
     </task>
     <task id="LOCAL-00001" summary="Complete JdbcUtils">
       <created>1711013606561</created>
@@ -144,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711028497675</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Complete JdbcUtils.update">
+      <created>1711030126442</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711030126442</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

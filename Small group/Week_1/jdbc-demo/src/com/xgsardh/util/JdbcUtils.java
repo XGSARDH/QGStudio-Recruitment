@@ -105,5 +105,31 @@ public class JdbcUtils {
         return count;
     }
 
+    public static <T> T query(String sql, MyHandler<T> handler, Object... params)throws Exception {
+        T result = null;
+        ResultSet rs = null;
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        try {
+            conn = JdbcUtils.getconntion();
+            pstmt = conn.prepareStatement(sql);
+            if (params != null) {
+                for (int i = 0; i < params.length; i++) {
+                    // Set SQL parameters
+                    pstmt.setObject(i + 1, params[i]);
+                }
+            }
+            rs = pstmt.executeQuery();
+            result = handler.handle(rs);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JdbcUtils.close(null,null,pstmt,conn);
+        }
+        return result;
+    }
+
 
 }

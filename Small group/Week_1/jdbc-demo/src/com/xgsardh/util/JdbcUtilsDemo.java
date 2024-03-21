@@ -1,5 +1,6 @@
 package com.xgsardh.util;
 
+import com.xgsardh.Account;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -29,13 +30,43 @@ public class JdbcUtilsDemo {
     }
 
     @Test
-    public void testcreate() throws Exception {
+    public void testupdate() throws Exception {
 
-        String sql = "insert into account (id,name,money) value (?,?,?)";
-        int count = JdbcUtils.update(sql,5,"Tom",1000);
+        String sql1 = "insert into account (id,name,money) value (?,?,?)";
+        int count1 = JdbcUtils.update(sql1,4,"Tom",1000);
+        String sql2 = "delete from account where id = ?";
+        int count2 = JdbcUtils.update(sql2,4);
 
         //6. 处理结果
-        System.out.println(count);
+        System.out.println(count1);
+        System.out.println(count2);
+
+    }
+
+    @Test
+    public void testquery() throws Exception {
+
+        String sql = "select id, name, money from account where id = ?";
+        MyHandler<Account> handler = resultSet -> {
+            if (resultSet.next()) {
+                return new Account(
+                        resultSet.getInt("id"),
+                        resultSet.getString("name"),
+                        resultSet.getInt("money")
+                );
+            } else {
+                //If the query is empty, it will return empty
+                return null;
+            }
+        };
+
+        //Use query to query the user with ID 1
+        Account account = JdbcUtils.query(sql, handler, 1);
+        if (account != null) {
+            System.out.println(account);
+        } else {
+            System.out.println("No person found with the given ID.");
+        }
 
     }
 
