@@ -105,6 +105,13 @@ public class JdbcUtils {
         return count;
     }
 
+    /**
+     *  @name        : public static <T> T query(String sql, MyHandler<T> handler, Object... params)throws Exception
+     *	@description : Search in JdbcUtils
+     *	@param		 : String sql, MyHandler<T> handler, Object... params
+     *	@return		 : <T>
+     *  @notice      : None
+     */
     public static <T> T query(String sql, MyHandler<T> handler, Object... params)throws Exception {
         T result = null;
         ResultSet rs = null;

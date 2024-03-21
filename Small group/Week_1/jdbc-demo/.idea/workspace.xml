@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e15d2599-06fe-456f-8697-2804fcb5fdf1" name="变更" comment="Complete JdbcUtils.update">
-      <change afterPath="$PROJECT_DIR$/src/com/xgsardh/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xgsardh/util/MyHandler.java" afterDir="false" />
+    <list default="true" id="e15d2599-06fe-456f-8697-2804fcb5fdf1" name="变更" comment="Complete JdbcUtils.query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jdbc-demo/com/xgsardh/util/JdbcUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jdbc-demo/com/xgsardh/util/JdbcUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jdbc-demo/com/xgsardh/util/JdbcUtilsDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jdbc-demo/com/xgsardh/util/JdbcUtilsDemo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtilsDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtilsDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +152,7 @@
       <workItem from="1710984373316" duration="7128000" />
       <workItem from="1711016891578" duration="681000" />
       <workItem from="1711018109733" duration="2522000" />
-      <workItem from="1711020780908" duration="7085000" />
+      <workItem from="1711020780908" duration="8041000" />
     </task>
     <task id="LOCAL-00001" summary="Complete JdbcUtils">
       <created>1711013606561</created>
@@ -187,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711030126442</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Complete JdbcUtils.query">
+      <created>1711032263869</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711032263869</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +212,7 @@
     </ignored-roots>
     <MESSAGE value="Complete JdbcUtils" />
     <MESSAGE value="Complete JdbcUtils.update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete JdbcUtils.update" />
+    <MESSAGE value="Complete JdbcUtils.query" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete JdbcUtils.query" />
   </component>
 </project>
