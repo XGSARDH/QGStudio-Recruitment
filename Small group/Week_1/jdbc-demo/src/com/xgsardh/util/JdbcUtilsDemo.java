@@ -1,5 +1,7 @@
 package com.xgsardh.util;
 
+import org.junit.Test;
+
 import java.sql.Connection;
 import java.sql.Statement;
 
@@ -23,6 +25,17 @@ public class JdbcUtilsDemo {
         //7. 释放资源
         //先释放后面打开的,后释放先打开的+
         JdbcUtils.close(null,stmt,null,conn);
+
+    }
+
+    @Test
+    public void testcreate() throws Exception {
+
+        String sql = "insert into account (id,name,money) value (?,?,?)";
+        int count = JdbcUtils.update(sql,5,"Tom",1000);
+
+        //6. 处理结果
+        System.out.println(count);
 
     }
 

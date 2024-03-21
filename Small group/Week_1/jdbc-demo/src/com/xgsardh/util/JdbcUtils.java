@@ -76,7 +76,7 @@ public class JdbcUtils {
     }
 
     /**
-     *  @name        : public static int update(String sql, Object... params) throws Exception {
+     *  @name        : public static int update(String sql, Object... params) throws Exception
      *	@description : Close Connection
      *	@param		 : String sql, Object... params
      *	@return		 : int
@@ -89,9 +89,11 @@ public class JdbcUtils {
         try {
             conn = JdbcUtils.getconntion();
             pstmt = conn.prepareStatement(sql);
+
             for(int i = 0;i < params.length;i++){
                 pstmt.setObject(i+1,params[i]);
             }
+
             count = pstmt.executeUpdate();
 
         }catch(Exception e) {
@@ -102,5 +104,6 @@ public class JdbcUtils {
         }
         return count;
     }
+
 
 }
