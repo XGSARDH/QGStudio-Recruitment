@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e15d2599-06fe-456f-8697-2804fcb5fdf1" name="变更" comment="Complete JdbcUtils.query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtilsDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xgsardh/util/JdbcUtilsDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +155,7 @@
       <workItem from="1710984373316" duration="7128000" />
       <workItem from="1711016891578" duration="681000" />
       <workItem from="1711018109733" duration="2522000" />
-      <workItem from="1711020780908" duration="8041000" />
+      <workItem from="1711020780908" duration="9831000" />
     </task>
     <task id="LOCAL-00001" summary="Complete JdbcUtils">
       <created>1711013606561</created>

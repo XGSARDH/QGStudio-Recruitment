@@ -1,5 +1,8 @@
 package com.xgsardh;
 
+/**
+ * @author SARDH
+ */
 public class Account {
     private int id;
     private String name;

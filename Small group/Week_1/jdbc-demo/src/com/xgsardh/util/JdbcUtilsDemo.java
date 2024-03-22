@@ -6,6 +6,9 @@ import org.junit.Test;
 import java.sql.Connection;
 import java.sql.Statement;
 
+/**
+ * @author SARDH
+ */
 public class JdbcUtilsDemo {
     public static void main(String[] args)throws Exception {
         Connection conn = JdbcUtils.getconntion();
@@ -30,7 +33,7 @@ public class JdbcUtilsDemo {
     }
 
     @Test
-    public void testupdate() throws Exception {
+    public void updateTest() throws Exception {
 
         String sql1 = "insert into account (id,name,money) value (?,?,?)";
         int count1 = JdbcUtils.update(sql1,4,"Tom",1000);
@@ -44,7 +47,7 @@ public class JdbcUtilsDemo {
     }
 
     @Test
-    public void testquery() throws Exception {
+    public void queryTest() throws Exception {
 
         String sql = "select id, name, money from account where id = ?";
         MyHandler<Account> handler = resultSet -> {
