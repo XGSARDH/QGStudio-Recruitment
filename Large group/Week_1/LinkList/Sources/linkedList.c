@@ -1,4 +1,4 @@
-﻿/**************************************************************
+/**************************************************************
 *	Macro Define Section
 **************************************************************/
 
@@ -19,6 +19,13 @@
 #ifndef LINKEDLIST_C_INCLUDED
 #define LINKEDLIST_C_INCLUDED
 
+/**
+ *  @name        : Status InitList(LinkList *L);
+ *	@description : initialize an empty linked list with only the head node without value
+ *	@param		 : L(the head node)
+ *	@return		 : Status
+ *  @notice      : None
+ */
 Status InitList(LinkedList* L)
 {
 	*L = (LinkedList)malloc(sizeof(LNode));
@@ -32,6 +39,14 @@ Status InitList(LinkedList* L)
 	return SUCCESS;
 }
 
+
+/**
+ *  @name        : void DestroyList(LinkedList *L)
+ *	@description : destroy a linked list, free all the nodes
+ *	@param		 : L(the head node)
+ *	@return		 : None
+ *  @notice      : None
+ */
 void DestroyList(LinkedList* L)
 {	
 	if (*L == NULL)return;
@@ -47,6 +62,13 @@ void DestroyList(LinkedList* L)
 	return;
 }
 
+/**
+ *  @name        : Status InsertList(LNode *p, LNode *q)
+ *	@description : insert node q after node p
+ *	@param		 : p, q
+ *	@return		 : Status
+ *  @notice      : None
+ */
 Status InsertList(LNode* p, LNode* q)
 {
 	if (p == NULL)return ERROR;//Check if it is an empty node
@@ -58,6 +80,13 @@ Status InsertList(LNode* p, LNode* q)
 	return SUCCESS;
 }
 
+/**
+ *  @name        : Status DeleteList(LNode *p, ElemType *e)
+ *	@description : delete the first node after the node p and assign its value to e
+ *	@param		 : p, e
+ *	@return		 : Status
+ *  @notice      : None
+ */
 Status DeleteList(LNode* p, ElemType* e)
 {
 	if (p == NULL)return ERROR;
@@ -70,6 +99,13 @@ Status DeleteList(LNode* p, ElemType* e)
 	return SUCCESS;
 }
 
+/**
+ *  @name        : void TraverseList(LinkedList L, void (*visit)(ElemType e))
+ *	@description : traverse the linked list and call the funtion visit
+ *	@param		 : L(the head node), visit
+ *	@return		 : None
+ *  @notice      : None
+ */
 void TraverseList(LinkedList L, void (*visit)(ElemType e))
 {
 	if (L->next == NULL) {
@@ -85,6 +121,13 @@ void TraverseList(LinkedList L, void (*visit)(ElemType e))
 	return;
 }
 
+/**
+ *  @name        : Status SearchList(LinkedList L, ElemType e)
+ *	@description : find the first node in the linked list according to e
+ *	@param		 : L(the head node), e
+ *	@return		 : Status
+ *  @notice      : None
+ */
 Status SearchList(LinkedList L, ElemType e) 
 {
 	if (L == NULL)return ERROR;
@@ -101,6 +144,13 @@ Status SearchList(LinkedList L, ElemType e)
 	return ERROR;
 }
 
+/**
+ *  @name        : Status ReverseList(LinkedList *L)
+ *	@description : reverse the linked list
+ *	@param		 : L(the head node)
+ *	@return		 : Status
+ *  @notice      : None
+ */
 Status ReverseList(LinkedList* L)
 {
 	if (*L == NULL)return ERROR;
@@ -131,6 +181,13 @@ Status ReverseList(LinkedList* L)
 	return SUCCESS;
 }
 
+/**
+ *  @name        : Status IsLoopList(LinkedList L)
+ *	@description : judge whether the linked list is looped
+ *	@param		 : L(the head node)
+ *	@return		 : Status
+ *  @notice      : ERROR is not looplist, SUCCESS is looplist.
+ */
 Status IsLoopList(LinkedList L) 
 {
 	LNode* quickLNode = L;
@@ -149,6 +206,13 @@ Status IsLoopList(LinkedList L)
 	return ERROR;
 }
 
+/**
+ *  @name        : LNode* ReverseEvenList(LinkedList *L)
+ *	@description : reverse the nodes which value is an even number in the linked list, input: 1 -> 2 -> 3 -> 4  output: 2 -> 1 -> 4 -> 3
+ *	@param		 : L(the head node)
+ *	@return		 : LNode(the new head node)
+ *  @notice      : choose to finish
+ */
 LNode* ReverseEvenList(LinkedList* L) 
 {
 
@@ -172,6 +236,13 @@ LNode* ReverseEvenList(LinkedList* L)
 	return *L;
 }
 
+/**
+ *  @name        : LNode* FindMidNode(LinkedList *L)
+ *	@description : find the middle node in the linked list
+ *	@param		 : L(the head node)
+ *	@return		 : LNode
+ *  @notice      : choose to finish
+ */
 LNode* FindMidNode(LinkedList *L)
 {
 	if ((*L) == NULL)return NULL;
@@ -192,6 +263,13 @@ LNode* FindMidNode(LinkedList *L)
 	return slowLNode;
 }
 
+/**
+ *  @name        : LinkedList* CreateLNode()
+ *	@description : create a list with input
+ *	@param		 : None
+ *	@return		 : LinkedList*
+ *  @notice      : Self written
+ */
 LinkedList CreateLNode() 
 {
 	LinkedList L =NULL;
@@ -213,6 +291,13 @@ LinkedList CreateLNode()
 	return L;
 }
 
+/**
+ *  @name        : Status AddEndList(LinkedList* L)
+ *	@description : Tail insertion method for inserting pointers
+ *	@param		 : LinkedList L, ElemType input
+ *	@return		 : LinkedList
+ *  @notice      : Self written
+ */
 Status AddEndList(LinkedList L, ElemType* input)
 {
 	LinkedList newLode = NULL;
@@ -227,12 +312,26 @@ Status AddEndList(LinkedList L, ElemType* input)
 	return SUCCESS;
 }
 
+/**
+ *  @name        : void PrintElemType(ElemType e)
+ *	@description : print the ElemType
+ *	@param		 : ElemType e
+ *	@return		 : None
+ *  @notice      : Self written
+ */
 void PrintElemType(ElemType e)
 {
 	printf("%d", e);
 	return;
 }
 
+/**
+ *  @name        : void ScanfElemType(ElemType *e)
+ *	@description : scanf the ElemType
+ *	@param		 : ElemType *e
+ *	@return		 : Status
+ *  @notice      : Self written
+ */
 Status ScanfElemType(ElemType* e)
 {
 	if (e == NULL)return ERROR;
@@ -241,6 +340,13 @@ Status ScanfElemType(ElemType* e)
 	return SUCCESS;
 }
 
+/**
+ *  @name        : Status MakeEqualData(ElemType* origin, ElemType* Result);
+ *	@description : Make the value of ElemData equal to the value of another ElemDatas
+ *	@param		 : ElemType* origin, ElemType* result
+ *	@return		 : Status
+ *  @notice      : Self written
+ */
 Status MakeEqualData(ElemType* origin, ElemType* result) 
 {
 	if (origin == NULL || result == NULL)return ERROR;
@@ -248,6 +354,13 @@ Status MakeEqualData(ElemType* origin, ElemType* result)
 	return SUCCESS;
 }
 
+/**
+ *  @name        : Status MakeEqualData(ElemType* origin, ElemType* Result);
+ *	@description : Check if two ElemTypes are equal
+ *	@param		 : ElemType* origin, ElemType* result
+ *	@return		 : Status
+ *  @notice      : Self written, SUCCESS is equal.ERROR is not equal.
+ */
 Status IsMakeEqualData(ElemType* origin, ElemType* result)
 {
 	if (origin == NULL || result == NULL)return ERROR;

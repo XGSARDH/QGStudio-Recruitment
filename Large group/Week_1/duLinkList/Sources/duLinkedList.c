@@ -23,6 +23,13 @@
 *	Prototype implementation Section
 **************************************************************/
 
+/**
+ *  @name        : Status InitList_DuL(DuLinkedList *L)
+ *	@description : initialize an empty linked list with only the head node
+ *	@param		 : L(the head node)
+ *	@return		 : Status
+ *  @notice      : None
+ */
 Status InitList_DuL(DuLinkedList* L)
 {
 	*L = (DuLinkedList)malloc(sizeof(DuLNode));
@@ -37,6 +44,13 @@ Status InitList_DuL(DuLinkedList* L)
 	return SUCCESS;
 }
 
+/**
+ *  @name        : void DestroyList_DuL(DuLinkedList *L)
+ *	@description : destroy a linked list
+ *	@param		 : L(the head node)
+ *	@return		 : status
+ *  @notice      : None
+ */
 void DestroyList_DuL(DuLinkedList* L) 
 {
 	if (*L == NULL)return;
@@ -52,6 +66,13 @@ void DestroyList_DuL(DuLinkedList* L)
 	return;
 }
 
+/**
+ *  @name        : Status InsertBeforeList_DuL(DuLNode *p, LNode *q)
+ *	@description : insert node q before node p
+ *	@param		 : p, q
+ *	@return		 : status
+ *  @notice      : None
+ */
 Status InsertBeforeList_DuL(DuLNode* p, DuLNode* q)
 {
 	if (p == NULL)return ERROR;//Check if it is an empty node
@@ -67,6 +88,13 @@ Status InsertBeforeList_DuL(DuLNode* p, DuLNode* q)
 	return SUCCESS;
 }
 
+/**
+ *  @name        : Status InsertAfterList_DuL(DuLNode *p, DuLNode *q)
+ *	@description : insert node q after node p
+ *	@param		 : p, q
+ *	@return		 : status
+ *  @notice      : None
+ */
 Status InsertAfterList_DuL(DuLNode* p, DuLNode* q)
 {
 	if (p == NULL)return ERROR;//Check if it is an empty node
@@ -81,6 +109,13 @@ Status InsertAfterList_DuL(DuLNode* p, DuLNode* q)
 	return SUCCESS;
 }
 
+/**
+ *  @name        : Status DeleteList_DuL(DuLNode *p, ElemType *e)
+ *	@description : delete the first node after the node p and assign its value to e
+ *	@param		 : p, e
+ *	@return		 : status
+ *  @notice      : None
+ */
 Status DeleteList_DuL(DuLNode* p, ElemType* e)
 {
 	if (p == NULL)return ERROR;
@@ -94,6 +129,13 @@ Status DeleteList_DuL(DuLNode* p, ElemType* e)
 	return SUCCESS;
 }
 
+/**
+ *  @name        : DuLinkedList CreateLNode()
+ *	@description : create a list with input
+ *	@param		 : None
+ *	@return		 : None
+ *  @notice      : Self written
+ */
 DuLinkedList CreateLNode()
 {
 	DuLinkedList L = NULL;
@@ -113,6 +155,13 @@ DuLinkedList CreateLNode()
 	return L;
 }
 
+/**
+ *  @name        : Status AddEndList(DuLinkedList* L)
+ *	@description : Tail insertion method for inserting pointers
+ *	@param		 : DuLinkedList L, ElemType input
+ *	@return		 : DuLinkedList
+ *  @notice      : Self written
+ */
 Status AddEndList(DuLinkedList L, ElemType* input) 
 {
 	DuLinkedList newLode = NULL;
@@ -128,6 +177,13 @@ Status AddEndList(DuLinkedList L, ElemType* input)
 	return SUCCESS;
 }
 
+/**
+ *  @name        : void TraverseList_DuL(DuLinkedList L, void (*visit)(ElemType e))
+ *	@description : traverse the linked list and call the funtion visit
+ *	@param		 : L(the head node), visit
+ *	@return		 : Status
+ *  @notice      : None
+ */
 void TraverseList_DuL(DuLinkedList L, void (*visit)(ElemType e))
 {
 	if (L->next == NULL) {
@@ -143,12 +199,26 @@ void TraverseList_DuL(DuLinkedList L, void (*visit)(ElemType e))
 	return;
 }
 
+/**
+ *  @name        : void PrintElemType(ElemType e)
+ *	@description : print the ElemType
+ *	@param		 : ElemType e
+ *	@return		 : None
+ *  @notice      : Self written
+ */
 void PrintElemType(ElemType e)
 {
 	printf("%d", e);
 	return;
 }
 
+/**
+ *  @name        : void ScanfElemType(ElemType *e)
+ *	@description : scanf the ElemType
+ *	@param		 : ElemType *e
+ *	@return		 : Status
+ *  @notice      : Self written
+ */
 Status ScanfElemType(ElemType* e)
 {
 	if (e == NULL)return ERROR;
@@ -157,6 +227,13 @@ Status ScanfElemType(ElemType* e)
 	return SUCCESS;
 }
 
+/**
+ *  @name        : Status MakeEqualData(ElemType* origin, ElemType* Result);
+ *	@description : Make the value of ElemData equal to the value of another ElemDatas
+ *	@param		 : ElemType* origin, ElemType* result
+ *	@return		 : Status
+ *  @notice      : Self written
+ */
 Status MakeEqualData(ElemType* origin, ElemType* result)
 {
 	if (origin == NULL || result == NULL)return ERROR;
@@ -164,6 +241,13 @@ Status MakeEqualData(ElemType* origin, ElemType* result)
 	return SUCCESS;
 }
 
+/**
+ *  @name        : Status MakeEqualData(ElemType* origin, ElemType* Result);
+ *	@description : Check if two ElemTypes are equal
+ *	@param		 : ElemType* origin, ElemType* result
+ *	@return		 : Status
+ *  @notice      : Self written, SUCCESS is equal.ERROR is not equal.
+ */
 Status IsMakeEqualData(ElemType* origin, ElemType* result)
 {
 	if (origin == NULL || result == NULL)return ERROR;
