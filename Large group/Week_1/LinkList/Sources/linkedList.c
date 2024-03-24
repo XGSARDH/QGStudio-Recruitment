@@ -368,6 +368,25 @@ Status IsMakeEqualData(ElemType* origin, ElemType* result)
 	else return ERROR;
 }
 
+/**
+ *  @name        : void ScanfElemType(ElemType *e)
+ *	@description : scanf the ElemType
+ *	@param		 : ElemType *e
+ *	@return		 : Status
+ *  @notice      : Self written
+ */
+Status ScanfElemType2(ElemType* e)
+{
+	int input = 0;
+	if (e == NULL)return ERROR;
+	do {
+		printf("Plaese input a number:");
+		input = scanf("%d", e);
+		while (getchar() != '\n');
+	} while (input == 0);
+	return SUCCESS;
+}
+
 /**************************************************************
 *	End-Multi-Include-Prevent Section
 **************************************************************/

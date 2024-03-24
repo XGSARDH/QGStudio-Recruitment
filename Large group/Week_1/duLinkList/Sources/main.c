@@ -81,7 +81,7 @@ void dealMenu(int choose, DuLinkedList* L)
 	switch (choose) {
 	case 1:
 		printf("Results before Insert:"); TraverseList_DuL(*L, PrintElemType);
-		ScanfElemType(&input);
+		ScanfElemType2(&input);
 
 		if (AddEndList(*L, &input) == SUCCESS)printf("Insert successful\n");
 		else printf("Delete failed\n");
@@ -100,7 +100,7 @@ void dealMenu(int choose, DuLinkedList* L)
 	case 3:
 		printf("Results before insert:"); TraverseList_DuL(*L, PrintElemType);
 		if (InitList_DuL(&currLNode1) == SUCCESS && InitList_DuL(&currLNode2)==SUCCESS) {
-			ScanfElemType(&(currLNode2->data));
+			ScanfElemType2(&(currLNode2->data));
 		}
 		else {
 			printf("ERROR!"); break;
@@ -121,7 +121,7 @@ void dealMenu(int choose, DuLinkedList* L)
 	case 4:
 		printf("Results before insert:"); TraverseList_DuL(*L, PrintElemType);
 		if (InitList_DuL(&currLNode1) == SUCCESS && InitList_DuL(&currLNode2) == SUCCESS) {
-			ScanfElemType(&(currLNode2->data));
+			ScanfElemType2(&(currLNode2->data));
 		}
 		else {
 			printf("ERROR!"); break;
@@ -168,3 +168,4 @@ void dealMenu(int choose, DuLinkedList* L)
 		break;
 	}
 }
+

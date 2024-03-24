@@ -156,6 +156,15 @@ Status MakeEqualData(ElemType* origin, ElemType* result);
  */
 Status IsMakeEqualData(ElemType* origin, ElemType* result);
 
+/**
+ *  @name        : void ScanfElemType(ElemType *e)
+ *	@description : scanf the ElemType
+ *	@param		 : ElemType *e
+ *	@return		 : Status
+ *  @notice      : Self written
+ */
+Status ScanfElemType2(ElemType* e);
+
  /**************************************************************
 *	End-Multi-Include-Prevent Section
 **************************************************************/

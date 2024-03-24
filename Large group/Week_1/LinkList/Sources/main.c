@@ -83,7 +83,7 @@ void dealMenu(int choose, LinkedList* L)
 	switch (choose) {
 	case 1:
 		printf("Results before Insert:"); TraverseList(*L, PrintElemType);
-		ScanfElemType(&input);
+		ScanfElemType2(&input);
 
 		if (AddEndList(*L, &input) == SUCCESS)printf("Insert successful\n");
 		else printf("Delete failed\n");
@@ -102,7 +102,7 @@ void dealMenu(int choose, LinkedList* L)
 	case 3:
 		printf("Results before insert:"); TraverseList(*L, PrintElemType);
 		if (InitList(&currLNode) == SUCCESS) {
-			ScanfElemType(&(currLNode->data));
+			ScanfElemType2(&(currLNode->data));
 		}
 		else {
 			printf("ERROR!"); break;
@@ -136,7 +136,7 @@ void dealMenu(int choose, LinkedList* L)
 		break;
 
 	case 6:
-		printf("input:"); ScanfElemType(&input);
+		ScanfElemType2(&input);
 		if (SearchList(*L, input) == SUCCESS) {
 			printf("exist\n"); system("pause"); system("cls");
 		}
@@ -205,3 +205,4 @@ void dealMenu(int choose, LinkedList* L)
 		break;
 	}
 }
+
