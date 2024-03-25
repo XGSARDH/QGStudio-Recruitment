@@ -168,12 +168,13 @@ int infixToSuffix(factor* array, LinkStack *stackSuffix, int arraylength) {
 
 double suffixToResult(factor* array, LinkStack* stackSuffix, int arraylength) {
     for (int i = 0; i < arraylength; i++) {
+
         //如果是数字
         if (array[i].flag == TRUE) {
             pushLStack(stackSuffix, array[i]);
             continue;
         }
-
+        if (arraylength == 2)break;
         //以下为运算符
         char arrayc = array[i].symbol;
         factor top, second;
