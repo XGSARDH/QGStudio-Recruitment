@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="QG_HttpServlet:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/QG_HttpServlet_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="QG_HttpServlet/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="QG_HttpServlet" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

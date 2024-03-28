@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e15d2599-06fe-456f-8697-2804fcb5fdf1" name="变更" comment="Complete JdbcUtils.query" />
+    <list default="true" id="e15d2599-06fe-456f-8697-2804fcb5fdf1" name="变更" comment="Complete JdbcUtils.query">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "21",
     "last_opened_file_path": "C:/Users/SARDH/IdeaProjects/JdbcTest/JdbcTest.iml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -153,6 +156,7 @@
       <workItem from="1711016891578" duration="681000" />
       <workItem from="1711018109733" duration="2522000" />
       <workItem from="1711020780908" duration="10621000" />
+      <workItem from="1711378254550" duration="228000" />
     </task>
     <task id="LOCAL-00001" summary="Complete JdbcUtils">
       <created>1711013606561</created>
