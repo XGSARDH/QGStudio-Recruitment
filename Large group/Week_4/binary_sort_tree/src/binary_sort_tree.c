@@ -1,6 +1,3 @@
-//
-// Created by eke_l on 2021/4/21.
-//
 
 #ifndef BINARYSORTTREE_BINARY_SORT_TREE_C
 #define BINARYSORTTREE_BINARY_SORT_TREE_C
@@ -47,7 +44,7 @@ static void insert_helper(NodePtr* node, ElemType value) {
     else if (value > (*node)->value) {
         insert_helper(&((*node)->right), value);
     }
-    // Èç¹ûÖµÏàµÈ£¬Ôò²»²åÈë£¬ÒòÎªBST²»ÔÊÐíÖØ¸´Öµ
+    // å¦‚æžœå€¼ç›¸ç­‰ï¼Œåˆ™ä¸æ’å…¥ï¼Œå› ä¸ºBSTä¸å…è®¸é‡å¤å€¼
 }
 
 /**
@@ -122,7 +119,7 @@ Status BST_search(BinarySortTreePtr BST, ElemType value) {
     NodePtr current = BST->root;
     while (current != NULL) {
         if (value == current->value) {
-            return 1; // ÕÒµ½ÁË
+            return 1; // æ‰¾åˆ°äº†
         }
         else if (value < current->value) {
             current = current->left;
@@ -131,7 +128,7 @@ Status BST_search(BinarySortTreePtr BST, ElemType value) {
             current = current->right;
         }
     }
-    return 0; // Ã»ÕÒµ½
+    return 0; // æ²¡æ‰¾åˆ°
 }
 
 
@@ -142,7 +139,7 @@ Status BST_search(BinarySortTreePtr BST, ElemType value) {
  * @return is successful
  */
 Status BST_preorderI(BinarySortTreePtr BST, void (*visit)(NodePtr)) {
-    NodePtr stack[100]; // ¼ÙÉèÕ»×ã¹»´ó
+    NodePtr stack[100]; // å‡è®¾æ ˆè¶³å¤Ÿå¤§
     int top = -1;
     NodePtr node = BST->root;
 
@@ -189,7 +186,7 @@ Status BST_preorderR(BinarySortTreePtr BST, void (*visit)(NodePtr)) {
  * @param (*visit) callback
  * @return is successful
  */
- // µÝ¹éÊµÏÖ
+ // é€’å½’å®žçŽ°
 void BST_inorderR_helper(NodePtr node, void (*visit)(NodePtr)) {
     if (node != NULL) {
         BST_inorderR_helper(node->left, visit);
@@ -237,7 +234,7 @@ Status BST_inorderI(BinarySortTreePtr BST, void (*visit)(NodePtr)) {
 
 
 
- // µÝ¹éÊµÏÖ
+ // é€’å½’å®žçŽ°
 void BST_postorderR_helper(NodePtr node, void (*visit)(NodePtr)) {
     if (node != NULL) {
         BST_postorderR_helper(node->left, visit);
@@ -292,7 +289,7 @@ NodePtr dequeue(Queue* queue) {
 
 Status BST_levelOrder(BinarySortTreePtr BST, void (*visit)(NodePtr)) {
     if (BST == NULL || BST->root == NULL) return 0;
-    Queue* queue = createQueue(100); // ¼ÙÉè100×ã¹»´ó
+    Queue* queue = createQueue(100); // å‡è®¾100è¶³å¤Ÿå¤§
     enqueue(queue, BST->root);
     while (!isEmpty(queue)) {
         NodePtr current = dequeue(queue);
