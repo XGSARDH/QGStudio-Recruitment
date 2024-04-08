@@ -7,10 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e15d2599-06fe-456f-8697-2804fcb5fdf1" name="变更" comment="Complete JdbcUtils.query">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Week_2/QG_HttpServlet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_2/QG_HttpServlet/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e15d2599-06fe-456f-8697-2804fcb5fdf1" name="变更" comment="Complete JdbcUtils.query" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,6 +158,7 @@
       <workItem from="1712059531650" duration="2174000" />
       <workItem from="1712080099004" duration="631000" />
       <workItem from="1712085037747" duration="595000" />
+      <workItem from="1712571824938" duration="22000" />
     </task>
     <task id="LOCAL-00001" summary="Complete JdbcUtils">
       <created>1711013606561</created>
