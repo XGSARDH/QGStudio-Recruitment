@@ -14,6 +14,7 @@
   <button type="submit">Login</button>
   <!-- 新增的注册按钮 -->
   <button type="button" onclick="window.location.href='register.jsp'">Register</button>
+  <button type="button" onclick="window.location.href='retrievePassword.jsp'">Retrieve Password</button>
 </form>
 
 <div id="responseMsg"></div>

@@ -8,8 +8,11 @@
 
 <h2>Register</h2>
 
+<p>Password rules: At least contain letters, numbers, special characters, 1-9 digits</p>
+
 <form id="registerForm">
   userName:<input type="text" name="userName" id="userName"><br>
+  phone:<input type="text" name="phone" id="phone"><br>
   password:<input type="password" name="password" id="password"><br>
   <button type="submit">Register</button>
 </form>
@@ -23,6 +26,7 @@
 
       var userName = $('#userName').val();
       var password = $('#password').val();
+      var phone = $('#phone').val();
 
       $.ajax({
         dataType: "json",
@@ -32,7 +36,8 @@
         data: {
           method: 'register',
           userName: userName,
-          password: password
+          password: password,
+          phone: phone
         },
         beforeSend: function(xhr) {
           xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
@@ -41,6 +46,10 @@
           if(response.status === 200) {
             $('#responseMsg').html('<p style="color: green;">Registration successful. </p>' +
                     '<button onclick="window.location.href=\'index.jsp\'">Return to Login</button>');
+          } else if(response.status === 201) {
+            $('#responseMsg').html('<p style="color: red;">Your password does not comply with the rules </p>');
+          } else if(response.status === 202) {
+            $('#responseMsg').html('<p style="color: red;">Your phone does not comply with the rules </p>');
           } else {
             $('#responseMsg').html('<p style="color: red;">Username taken, please choose another. </p>');
           }

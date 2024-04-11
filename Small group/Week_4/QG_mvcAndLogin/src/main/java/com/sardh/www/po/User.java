@@ -6,6 +6,7 @@ package com.sardh.www.po;
 public class User {
     private String username;
     private String password;
+    private String phone;
 
     public User() {
     }
@@ -13,6 +14,21 @@ public class User {
     public User(String userName, String password) {
         this.username = userName;
         this.password = password;
+        this.phone = "";
+    }
+
+    public User(String username, String password, String phone) {
+        this.username = username;
+        this.password = password;
+        this.phone = phone;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getUsername() {
@@ -34,8 +50,9 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                ", userName='" + username + '\'' +
+                "username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", phone='" + phone + '\'' +
                 '}';
     }
 }

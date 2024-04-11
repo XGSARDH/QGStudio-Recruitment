@@ -7,15 +7,13 @@ public class TestUserDaoImpl {
     @Test
     public void Testsave(){
         UserDao userDao = new UserDaoImpl();
-        User user = new User("3","3");
+        User user = new User("3","3","3");
         if(userDao.findByUsername(user.getUsername()) == null){
             System.out.println(userDao.save(user));
         }
         else{
             System.out.println("exist");
         }
-
-
     }
 
     @Test

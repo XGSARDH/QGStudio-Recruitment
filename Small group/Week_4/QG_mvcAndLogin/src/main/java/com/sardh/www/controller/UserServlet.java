@@ -32,13 +32,39 @@ public class UserServlet extends BaseServlet{
         UserService userService = new UserServiceImpl();
         String username = request.getParameter("userName");
         String password = request.getParameter("password");
-        boolean registerStatus = userService.register(username, password);
-        if(registerStatus) {
+        String phone = request.getParameter("phone");
+        int registerStatus = userService.register(username, password, phone);
+        if(registerStatus == 1) {
             response.getWriter().write("{\"status\":200, \"message\":\"注册成功\"}");
-        } else {
+        } else if(registerStatus == 0) {
             response.getWriter().write("{\"status\":402, \"message\":\"注册失败\"}");
+        } else if(registerStatus == 2) {
+            response.getWriter().write("{\"status\":201, \"message\":\"注册失败\"}");
+        } else {
+            response.getWriter().write("{\"status\":202, \"message\":\"注册失败\"}");
         }
 
+    }
+
+    public void retrievePassword(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("application/json;charset=UTF-8");
+        UserService userService = new UserServiceImpl();
+        String username = request.getParameter("userName");
+        String password = request.getParameter("toBePassword");
+        String phone = request.getParameter("phone");
+        System.out.println(username);
+        System.out.println(password);
+        System.out.println(phone);
+        int registerStatus = userService.retrievePassword(username, password, phone);
+        System.out.println(registerStatus);
+        if(registerStatus == 1) {
+            response.getWriter().write("{\"status\":200, \"message\":\"注册成功\"}");
+        } else if(registerStatus == 0) {
+            response.getWriter().write("{\"status\":402, \"message\":\"注册失败\"}");
+        } else {
+            response.getWriter().write("{\"status\":201, \"message\":\"注册失败\"}");
+        }
     }
 
 }
