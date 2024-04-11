@@ -6,18 +6,35 @@ import java.util.List;
 
 public interface UserDao {
 
-    // 查找所有用户
+    /**
+     * @description: Find all users
+     * @return
+     */
     List<User> findAll();
 
-    // 保存用户（新增或更新）
+    /**
+     * @description: Save users (new or updated)
+     * @param user
+     * @return
+     */
     boolean save(User user);
 
-    // 更新用户信息
+    /**
+     * @description: Update user information
+     * @param user
+     */
     void update(User user);
 
-    // 删除用户
+    /**
+     * @description: delete user
+     * @param username
+     */
     void delete(String username);
 
-    // 根据用户名查找用户
+    /**
+     * @description: Find users based on username
+     * @param username
+     * @return
+     */
     User findByUsername(String username);
 }

@@ -11,7 +11,13 @@ import java.io.IOException;
 import java.lang.reflect.Constructor;
 
 public class UserServlet extends BaseServlet{
-
+    /**
+     * @description: Responsible for login methods
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void login(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("application/json;charset=UTF-8");
@@ -26,6 +32,13 @@ public class UserServlet extends BaseServlet{
         }
     }
 
+    /**
+     * @description: Responsible for registration methods
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void register(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("application/json;charset=UTF-8");
@@ -46,6 +59,13 @@ public class UserServlet extends BaseServlet{
 
     }
 
+    /**
+     * @description: Responsible for retrieving password methods
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     public void retrievePassword(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("application/json;charset=UTF-8");
