@@ -15,6 +15,10 @@
   <button type="submit">Login</button>
 </form>
 
+<form id="registerForm">
+  <button type="submit">register</button>
+</form>
+
 <div id="responseMsg"></div>
 
 <script>

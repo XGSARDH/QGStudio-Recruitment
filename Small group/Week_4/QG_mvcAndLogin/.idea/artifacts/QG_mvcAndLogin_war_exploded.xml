@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="QG_mvcAndLogin:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/QG_mvcAndLogin_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="QG_mvcAndLogin/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="QG_mvcAndLogin" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="alibaba.fastjson" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
