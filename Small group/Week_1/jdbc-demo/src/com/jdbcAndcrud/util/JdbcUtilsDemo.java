@@ -1,6 +1,6 @@
-package com.xgsardh.util;
+package com.jdbcAndcrud.util;
 
-import com.xgsardh.Account;
+import com.jdbcAndcrud.Account;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -36,9 +36,9 @@ public class JdbcUtilsDemo {
     public void updateTest() throws Exception {
 
         String sql1 = "insert into account (id,name,money) value (?,?,?)";
-        int count1 = JdbcUtils.update(sql1,4,"Tom",1000);
+        int count1 = CrudUtils.update(sql1,4,"Tom",1000);
         String sql2 = "delete from account where id = ?";
-        int count2 = JdbcUtils.update(sql2,4);
+        int count2 = CrudUtils.update(sql2,4);
 
         //6. 处理结果
         System.out.println(count1);
@@ -64,7 +64,7 @@ public class JdbcUtilsDemo {
         };
 
         //Use query to query the user with ID 1
-        Account account = JdbcUtils.query(sql, handler, 1);
+        Account account = CrudUtils.query(sql, handler, 1);
         if (account != null) {
             System.out.println(account);
         } else {

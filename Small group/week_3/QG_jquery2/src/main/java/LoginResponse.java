@@ -1,5 +1,3 @@
-package main.java;
-
 public class LoginResponse {
     private int status;
     private String message;

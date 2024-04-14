@@ -1,4 +1,4 @@
-package com.xgsardh.util;
+package com.jdbcAndcrud.util;
 
 
 import java.sql.ResultSet;
